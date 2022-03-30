@@ -3,6 +3,7 @@ import pandas as pd
 columns = ["row_num","star_name","distance","mass","radius","gravity"]
 df = pd.read_csv("final.csv",names=columns)
 del df["row_num"]
+df = df.iloc[1: , :]
 
 temp_mass = df["mass"].tolist()
 temp_mass.pop(0)
